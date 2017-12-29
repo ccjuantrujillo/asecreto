@@ -1,0 +1,20 @@
+<html>
+<head>
+	<script type="text/javascript" src="../../js/jquery.js"></script>
+	<script type="text/javascript">
+	$('#textbox').live('keydown', function(e) { 
+	  var keyCode = e.keyCode || e.which; 
+	  if (keyCode == 9) { 
+		e.preventDefault(); 
+		$("#txtTelefono").focus();
+	  } 
+	});
+	</script>	
+</head>
+<body>
+<div><textarea id='textbox' name='textbox'></textarea></div>
+<div><input id='txtApellidos' name='txtApellidos' type='text'></div>
+<div><input id='txtNombres' name='txtNombres' type='text'></div>
+<div><input id='txtTelefono' name='txtTelefono' type='text'></div>
+</body>
+</html>

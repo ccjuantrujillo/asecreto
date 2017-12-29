@@ -1,0 +1,73 @@
+#basic-modal-content {display:none;}
+#basic-modal-content1 {display:none;}
+
+
+/* Overlay */
+#simplemodal-overlay {background-color:#FFF; cursor: default;}
+
+/* Container */
+#simplemodal-container {
+	width:394px;
+	height:auto;
+}
+
+#basic-modal-content {
+	width:394px;
+	height:318px;
+	background: url(../../images/fon-postal-virtual.gif);
+}
+
+#basic-modal-content1 {
+	width:394px;
+	height:208px;
+	background: url(../../images/fon-postal-virtual2.gif) no-repeat;
+}
+
+
+#simplemodal-container a.modalCloseImg {
+	background: url(../../images/basic/x.png) no-repeat;
+	width:29px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-10px; 
+	right:-10px;
+	cursor:pointer;
+}
+
+
+#basic-modal-content div .section01,
+#basic-modal-content1 div .section01{width:328px;float:left;padding: 10px 0 10px 0;background:url(../../images/lin-midle.gif) bottom no-repeat;}
+
+#basic-modal-content1 div .noback{ background:none!important;}
+
+#basic-modal-content div .section01 img,
+#basic-modal-content1 div .section01 img{ float:left; border:1px solid #666;}
+
+#basic-modal-content div .section01 .detalle,
+#basic-modal-content1 div .section01 .detalle{float:left;padding:0 0 0 15px;width:166px;text-align:left;color:#666;}
+
+#basic-modal-content div .section01 .detalle strong,
+#basic-modal-content1 div .section01 .detalle strong{ color:#666; font-weight:900;}
+
+#basic-modal-content div .section01 .detalle div,
+#basic-modal-content1 div .section01 .detalle div{width:159px;padding:5px 0 5px;float:left;}
+
+#basic-modal-content div .section01 .detalle a,
+#basic-modal-content1 div .section01 .detalle a{ color:#e81317;}
+
+#basic-modal-content div .secction02{width:328px;float:left;padding: 10px 0 0 0}
+#basic-modal-content div .secction02 .bullet,
+#basic-modal-content1 div .secction02 .bullet{ float:left; background:url(../../images/arrow2.gif) left 3px no-repeat; padding:0 0 5px 10px;}
+
+#basic-modal-content div .secction02 .coment{ width:321px; height:54px; float:left; background:url(../../images/fon-regala-msm.gif) no-repeat; padding:3px 0 0 3px}
+#basic-modal-content div .secction02 .coment textarea{ width:316px; height:48px; border:0px; background:none; font-family:Arial, Helvetica, sans-serif; color:#666;}
+#basic-modal-content div .secction02 .restric {float: left;width: 328px; text-align:left; color:#FFF; font-size:10px;}
+#basic-modal-content div .secction02 .restric .enviar_btn{ display:block; width:69px; height:30px; background:url(../../images/btn-enviar-ama.gif) bottom no-repeat; float:right;}
+#basic-modal-content div .secction02 .restric .enviar_btn:hover{background:url(../../images/btn-enviar-ama.gif) top no-repeat}
+#basic-modal-content div .secction02 .restric .cancelar_btn{ display:block; float:right; width:69px; height:30px; background:url(../../images/btn-cancelar-ama.gif) bottom no-repeat;}
+#basic-modal-content div .secction02 .restric .cancelar_btn:hover{ background:url(../../images/btn-cancelar-ama.gif) top no-repeat;}
+#basic-modal-content div .secction02 .restric span{ display:block; float:left;}
+
+

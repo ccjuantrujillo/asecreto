@@ -1,0 +1,70 @@
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#FFF; cursor: default;}
+
+/* Container */
+#simplemodal-container {
+	height:235px;
+	width:334px;
+	background:url(../../images/bienvenidos.gif);
+}
+
+#simplemodal-container a.modalCloseImg {
+	background: url(../../images/basic/x.png) no-repeat;
+	width:29px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-10px; 
+	right:-10px;
+	cursor:pointer;
+}
+#basic-modal-content .case_btn{
+	width:100%;
+}
+
+#basic-modal-content .case_btn .btn_creategrup{ 
+	margin:0 auto;
+	display:block;
+	width:107px;
+	height:30px;
+	background: #999999 url(../../images/btn-crear-grupo.gif) bottom no-repeat;
+}
+#basic-modal-content .btn_creategrup:hover{
+	background:url(../../images/btn-crear-grupo.gif) top no-repeat;
+}
+#basic-modal-content .instr{ color:#ed1c24;}
+
+#simplemodal-container #basic-modal-content {}
+
+/********************* CREAR GRUPO ************************/
+
+#basic-modal-content .case_btn .btn_invitar {
+	margin:0 auto;
+	display: block;
+	height: 30px;
+	width: 107px;
+	background:url(../../images/btn-invitar-a-tus-amigos.gif) bottom no-repeat;
+}
+
+#basic-modal-content .case_btn .btn_invitar:hover{
+	background:url(../../images/btn-invitar-a-tus-amigos.gif) top no-repeat;
+}#basic-modal-content strong {
+	font-size: 22px;
+	color: #444444;
+}
+
+/********************** ENVIAR INTITACION ***************************/
+#basic-modal-content .case_btn .btn_verpag {
+	height: 30px;
+	width: 107px;
+	margin: 0 auto;
+	display: block;
+	background:url(../../images/btn-ver-pagina.gif) bottom no-repeat;	
+}
+
+#basic-modal-content .case_btn .btn_verpag:hover{
+	background:url(../../images/btn-ver-pagina.gif) top no-repeat;	
+}

@@ -1,0 +1,2 @@
+/* IE 6 hacks */
+#simplemodal-container a.modalCloseImg {background:none; right:-10px; width:29px; height:29px; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/basic/x.png',sizingMethod='scale');}
