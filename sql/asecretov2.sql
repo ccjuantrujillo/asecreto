@@ -1,6 +1,6 @@
 /*
-SQLyog Community v12.5.0 (32 bit)
-MySQL - 10.1.21-MariaDB : Database - asecreto
+SQLyog Community v12.4.3 (64 bit)
+MySQL - 5.7.21-log : Database - asecreto
 *********************************************************************
 */
 
@@ -88,14 +88,17 @@ CREATE TABLE `ams_empresa` (
   `EMPRC_Link` varchar(150) DEFAULT NULL COMMENT 'Url de la empresa.',
   `EMPRC_Icono` varchar(50) NOT NULL,
   PRIMARY KEY (`EMPRP_Codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ams_empresa` */
 
 insert  into `ams_empresa`(`EMPRP_Codigo`,`EMPRC_Nombre`,`EMPRC_FechaRegistro`,`EMPRC_FechaModificacion`,`EMPRC_Logo`,`EMPRC_FlagEstado`,`EMPRC_Link`,`EMPRC_Icono`) values 
 (1,'Wong','2010-11-03 19:31:09',NULL,'log-wong.gif','1','http://www.ewong.com/TV_CIU/Formularios/wfrm_Inicio.aspx\r\n','ico-wong.gif'),
-(2,'Get Up!\r\n','2010-11-03 19:31:09',NULL,'logo-get-up.jpg\r\n','1','','ico-get-up.jpg\r\n'),
-(3,'Personal Trainning\r\n','2010-11-03 19:34:19',NULL,'logo-pt.jpg\r\n','1',NULL,'ico-pt.jpg\r\n');
+(2,'iStore','2010-11-03 19:31:09',NULL,'logo-get-up.jpg\r\n','1','','istore.jpg\r\n'),
+(3,'Ripley','2010-11-03 19:34:19',NULL,'logo-pt.jpg\r\n','1',NULL,'ico-pt.jpg\r\n'),
+(4,'Bembos','2018-02-26 05:37:38',NULL,NULL,'1',NULL,'bembos.jpg'),
+(5,'Rosatel','2018-02-26 05:37:44',NULL,NULL,'1',NULL,'rosatel.jpg'),
+(6,'Coca Cola','2018-02-26 05:37:50',NULL,NULL,'1',NULL,'cocacola.jpg');
 
 /*Table structure for table `ams_evento` */
 
@@ -331,10 +334,10 @@ CREATE TABLE `ams_usuario` (
 /*Data for the table `ams_usuario` */
 
 insert  into `ams_usuario`(`USUAP_Codigo`,`TIPOP_Codigo`,`UBIGP_Codigo`,`USUAC_Correo`,`USUAC_Password`,`USUAC_Apellidos`,`USUAC_Nombres`,`USUAC_Foto`,`USUAC_FechaNacimiento`,`USUAC_FechaRegistro`,`USUAC_FechaModificacion`,`USUAC_NumeroDocumento`,`USUAC_Telefono`,`USUAC_Sexo`,`USUAC_Ciudad`,`USUAC_FlagEnviado`,`USUAC_FlagConfirmado`,`USUAC_FlagPromociones`,`USUAC_FlagNotificaciones`,`USUAC_FlagEstado`,`USUAC_FlagAdministrador`,`USUAC_FlagBienvenida`) values 
-(2,1,'000000','martin@correo.com','123456','Vila','Ricardo','','1963-05-05 00:00:00','2010-11-18 18:56:08',NULL,'10101010','4569874','','JUNIN','1','1','1','1','1','1','1'),
-(3,1,'000000','ericatoon@correo.com','ericatoon','Melgar','Erica ','','1977-11-08 00:00:00','2010-11-18 19:06:22',NULL,'25831790','5657520','','LIMA','1','1','1','1','1','1','0'),
-(4,1,'000000','ricardo.vila@correo.com','1187978569000','','ricardo','','0000-00-00 00:00:00','2010-11-18 19:36:45',NULL,'','','','','1','0','0','0','1','0','0'),
-(5,1,'000000','ricardotoon@cartoonproducciones.com','qwerty','maguiÃ±a','felix','','1950-01-01 00:00:00','2010-11-18 19:36:45',NULL,'458745874','9632587','','PIURA','1','1','1','1','1','1','1');
+(2,1,'000000','demo@correo.com','123456','Vila','Ricardo','','1963-05-05 00:00:00','2010-11-18 18:56:08',NULL,'10101010','4569874','','JUNIN','1','1','1','1','1','1','1'),
+(3,1,'000000','erica@correo.com','ericatoon','Melgar','Erica ','','1977-11-08 00:00:00','2010-11-18 19:06:22',NULL,'25831790','5657520','','LIMA','1','1','1','1','1','1','0'),
+(4,1,'000000','ricardo@correo.com','1187978569000','','ricardo','','0000-00-00 00:00:00','2010-11-18 19:36:45',NULL,'','','','','1','0','0','0','1','0','0'),
+(5,1,'000000','arturo@correo.com','qwerty','maguiÃ±a','felix','','1950-01-01 00:00:00','2010-11-18 19:36:45',NULL,'458745874','9632587','','PIURA','1','1','1','1','1','1','1');
 
 /*Table structure for table `ams_usuariogrupo` */
 
