@@ -14,9 +14,7 @@ class DPersona{
 		return $resultado;	
 	}
 	
-	public function leer_mensajes_buzon(){
-	
-	}
+
 
 	public function borrar_mensaje_buzon(){
 	

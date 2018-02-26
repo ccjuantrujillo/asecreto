@@ -5,20 +5,19 @@ class BD{
 	private $rows;
 	private $cadena;
 	public function __construct(){
-		$this->cnx   = mysql_connect("localhost","root","");
-		if(!mysql_select_db("asecreto",$this->cnx)){
-			echo "Error seleccionando la base de datos.";
+		if(!$this->cnx   = mysqli_connect("localhost","root","123456","asecreto")){
+			echo "Error en la conecion";
 		}
 	}
 	public function seleccionar($query){
-		$rs           = mysql_query($query,$this->cnx);
+		$rs           = mysqli_query($this->cnx,$query);
 		$this->cadena = $query;
 		$resultado = array();
-		while($row=mysql_fetch_array($rs)){
+		while($row=mysqli_fetch_array($rs)){
 			$arreglo=array();
-			for($i=0;$i<mysql_num_fields($rs);$i++){
-				$nombre=mysql_field_name($rs,$i);
-				$arreglo[$nombre]=$row[$i];
+			for($i=0;$i<mysqli_num_fields($rs);$i++){
+				$nombre=mysqli_fetch_field_direct($rs,$i);
+				$arreglo[$nombre->name]=$row[$i];
 				$arreglo[$i]=$row[$i];
 			}
 			array_push($resultado,$arreglo);
@@ -29,14 +28,14 @@ class BD{
 	public function insertar($tabla,$campos,$valores){
 		$cadena="insert into ".$tabla." (".$campos.") values (".$valores.")";
 		$this->cadena = $cadena;
-		$rs=mysql_query($cadena,$this->cnx);
+		$rs=mysqli_query($this->cnx,$cadena);
 		if(!$rs){
 			$txt="<script>alert('Ocurrio un error al grabar');</script>";
 			echo $txt;
 			$resultado=false;
 		}
 		else{
-			$resultado=mysql_insert_id($this->cnx);			
+			$resultado=mysqli_insert_id($this->cnx);			
 		}
 		return $resultado;
 	}
@@ -44,7 +43,7 @@ class BD{
 	public function eliminar($tabla,$condicion){
 		$cadena="delete from ".$tabla." where ".$condicion."";
 		$this->cadena = $cadena;
-		$rs=mysql_query($cadena,$this->cnx);
+		$rs=mysqli_query($this->cnx,$cadena);
 		if(!$rs){
 			$txt="<script>alert('Ocurrio un error al borrar');</script>";
 			echo $txt;
@@ -66,7 +65,7 @@ class BD{
 				$nombre = $arrcampos[$indice];
 				$valor  = $arrvalores[$indice];
 				$cadena = "update ".$tabla." set ".$nombre."=".$valor." where ".$condicion;
-				mysql_query($cadena,$this->cnx);
+				mysqli_query($this->cnx,$cadena);
 			}
 			$resultado = true;
 		}

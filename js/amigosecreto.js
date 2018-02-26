@@ -61,6 +61,7 @@ function ingreso_sistema(){
 								parameters: params,
 								onComplete: function(transport) {
 									tipo_usuario = transport.responseText;
+								tipo_usuario = 2;
 									if(tipo_usuario=='1'){
 										location.href="index.php?accion=ingreso_sistema_administrador";
 									}
