@@ -78,7 +78,9 @@ class LAdministrador{
             $nombre_usuario          = $datos_usuario[0]['USUAC_Nombres'];
             $apellidos_usuario       = $datos_usuario[0]['USUAC_Apellidos'];
             $foto_usuario            = ($datos_usuario[0]['USUAC_Foto']=='')?'images/IMG-LOG.jpg':"images/".$datos_usuario[0]['USUAC_Foto'];
-            $flagAdministrador 	     = $datos_usuario[0]['USUGRUC_FlagAdministrador'];
+            //$flagAdministrador 	     = $datos_usuario[0]['USUGRUC_FlagAdministrador'];
+			$flagAdministrador 	     = $datos_usuario[0]['USUAC_FlagAdministrador'];
+			$flagSorteado			 = $datos_grupo[0]['GRUPC_FlagSorteado'];	
             require_once "../vista/ingresa_datos_grupo.php";
 	}	
 
@@ -112,10 +114,12 @@ class LAdministrador{
             $deseos_usuario          = $usuariogrupo[0]['USUGRUC_CantidadDeseos'];
             $_SESSION['USUAP_Amigo'] = $amigo;
             $lista_muro              = $this->oDAdministrador->leer_mensajes_muro($grupo,$usuario);
-            if($flagAdministrador=='0'){
+            echo $flagAdministrador;
+            if($flagAdministrador==0){
                     require_once "../vista/muro_de_grupo.php";
             }
-            elseif($flagAdministrador=='1'){
+            elseif($flagAdministrador==1){
+            	            	echo "hola";
                     require_once "../vista/muro_de_grupo_administrador.php";
             }
 	}
@@ -424,29 +428,23 @@ class LAdministrador{
 		return $resultado;
 	}
 
-        public function verificar_confirmar_registro($id){
-            $resultado = $this->oDAdministrador->confirmar_registro($id);
-            header("location:../vista/index.php?accion=ingresa_a_tu_cuenta");
-            //Posible envio de correo de confirmacion
-        }
+    public function verificar_confirmar_registro($id){
+        $resultado = $this->oDAdministrador->confirmar_registro($id);
+        header("location:../vista/index.php?accion=ingresa_a_tu_cuenta");
+        //Posible envio de correo de confirmacion
+    }
 	
 	public function enviar_invitaciones($arrayNombre,$arrayEmail,$mensaje){
-                $arrayNombre       = $this->elimina_vacios_array($arrayNombre);
-                $arrayEmail        = $this->elimina_vacios_array($arrayEmail);
-                print("<pre>");
-                print_r($arrayNombre);
-                print("</pre>");
-                print("<pre>");
-                print_r($arrayEmail);
-                print("</pre>");
+        $arrayNombre       = $this->elimina_vacios_array($arrayNombre);
+        $arrayEmail        = $this->elimina_vacios_array($arrayEmail);
 		$usuario           = $_SESSION['USUAP_Codigo'];
 		$grupo             = $_SESSION['GRUPP_Codigo'];
 		//Datos del grupo
 		$datos_grupo       = $this->recuperar_grupo($grupo);
 		$nombre_grupo      = $datos_grupo[0]['GRUPC_Nombre'];
-                //Datos usuario
-                $datos_usuario     = $this->oDAdministrador->datos_usuario($usuario);
-                $nombre_usuario    = $datos_usuario[0]['USUAC_Nombres'];
+        //Datos usuario
+        $datos_usuario     = $this->oDAdministrador->datos_usuario($usuario);
+        $nombre_usuario    = $datos_usuario[0]['USUAC_Nombres'];
 		for($i=0;$i<count($arrayNombre);$i++){
 			$oDAdministrador1 = new DAdministrador();
 			$oDAdministrador2 = new DAdministrador();

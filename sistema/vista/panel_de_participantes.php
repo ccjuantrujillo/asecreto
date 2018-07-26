@@ -49,7 +49,8 @@
             <a href="#" class="m1" onclick="<?php echo $link_sortear;?>"><img src="images/sortear-on.png" alt="Sortear" border="0" class="fix-png" /></a>
             <a href="#" class="m2" onclick="link('fecha_de_entrega');"><img src="images/fecha-de-entrega-on.png" alt="Fecha de entrega de regalos" border="0" class="fix-png" /></a> 
             <a href="#" class="m2 activ" onclick="link('panel_de_participantes');"><img src="images/panel-de-participantes-on.png" alt="Panel de participantes" border="0" class="fix-png" /></a>
-            <a href="#" class="m2" onclick="link('buzon_del_jefe');"><img src="images/buzon-del-jefe.png"alt="Buzón del jefe" width="176" height="39" border="0" class="fix-png" /></a>       </div>
+            <a href="#" class="m2" onclick="link('buzon_del_jefe');"><img src="images/buzon-del-jefe.png"alt="Buzón del jefe" width="176" height="39" border="0" class="fix-png" /></a>       
+        </div>
         <div class="stream">
        	  <div class="item001"></div>
           <div class="item002">

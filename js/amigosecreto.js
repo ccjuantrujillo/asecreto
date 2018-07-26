@@ -57,22 +57,22 @@ function ingreso_sistema(){
 	var params = Form.serialize($("frmHome"));
 	if(validar_frmHome()){
 		new Ajax.Request(url, {
-								method: 'get', 
-								parameters: params,
-								onComplete: function(transport) {
-									tipo_usuario = transport.responseText;
-								tipo_usuario = 2;
-									if(tipo_usuario=='1'){
-										location.href="index.php?accion=ingreso_sistema_administrador";
-									}
-									else if(tipo_usuario=='2'){
-										location.href="index.php?accion=ingreso_sistema_usuario";
-									}
-									else if(tipo_usuario=='0'){
-										alert('Usuario o contrase�a no valida');
-									}
-								}
-						});
+				method: 'get', 
+				parameters: params,
+				onComplete: function(transport) {
+					tipo_usuario = transport.responseText;
+				tipo_usuario = 2;
+					if(tipo_usuario=='1'){
+						location.href="index.php?accion=ingreso_sistema_administrador";
+					}
+					else if(tipo_usuario=='2'){
+						location.href="index.php?accion=ingreso_sistema_usuario";
+					}
+					else if(tipo_usuario=='0'){
+						alert('Usuario o contrase�a no valida');
+					}
+				}
+		});
 	}
 }
 
@@ -138,15 +138,15 @@ function enviar_invitaciones(){
 	//alert(params);
 	if(validar_frmInvitacion()){
 		new Ajax.Request(url, {
-                                        method: 'get',
-                                        parameters: params,
-                                        onComplete: function(transport) {
-                                            if(transport.responseText){
-                                                    idgrupo = transport.responseText;
-                                                    location.href="index.php?accion=invitaciones_enviadas";
-                                            }
-                                        }
-                        });
+                    method: 'get',
+                    parameters: params,
+                    onComplete: function(transport) {
+                        if(transport.responseText){
+                                idgrupo = transport.responseText;
+                                location.href="index.php?accion=invitaciones_enviadas";
+                        }
+                    }
+    });
 	}
 }
 

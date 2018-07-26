@@ -56,13 +56,14 @@ function ocultar(blo) {
         </div>
       </div>  
 	  <?php
-	  $link_ingresa_datos_grupo = $flagSorteado==1?"this.href=null":"link('ingresa_datos_grupo');"; 
+	  $link_ingresa_datos_grupo = $flagSorteado==1?"this.href=null":"link('ingresa_datos_grupo');";
 	  $link_invitar_amigos      = $flagSorteado==1?"this.href=null":"link('invitar_amigos');"; 
 	  $link_sortear             = $flagSorteado==1?"this.href=null":"link('sortear');"; 
 	  ?>		  
       <div id="case_body_small">  
       	<div class="item_body001 fix-png"></div>
         <div class="item006"><img src="images/duen-001.png" width="167" height="176" class="fix-png" /></div>
+
         <div id="menu_left">   
             <a href="#" class="m1" onclick="<?php echo $link_ingresa_datos_grupo;?>"><img src="images/crear-grupo.png" alt="Crear grupo" border="0" class="fix-png" /></a>
             <a href="#" class="m2" onclick="<?php echo $link_invitar_amigos;?>"><img src="images/enviar-intitacion.png" alt="Enviar invitación" border="0" class="fix-png" /></a>

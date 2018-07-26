@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+   
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Juega al amigo secreto con Paginas Amarillas
     </title>
@@ -10,7 +11,7 @@
 	<script type='text/javascript' src='js/lightbox/jquery.js'></script>
 	<script type='text/javascript' src='js/lightbox/jquery.simplemodal.js'></script>
     <script type='text/javascript' src='js/lightbox/basic.js'></script>
-    
+      <script type="text/javascript" src="../../js/amigosecreto.js"></script>   
   	  <!-- IE 6 "fixes" -->
     <!--[if lt IE 7]>
     <link type='text/css' href='css/lightbox/basic_ie.css' rel='stylesheet' media='screen' />
@@ -56,17 +57,24 @@
        	  <input name="" type="button" value="" class="mi_cuenta" /><input name="" type="button" value="" class="mis_grupos" />
         </div>
       </div>  
+    <?php
+    $link_ingresa_datos_grupo = $flagSorteado==1?"this.href=null":"link('ingresa_datos_grupo');";
+    $link_invitar_amigos      = $flagSorteado==1?"this.href=null":"link('invitar_amigos');"; 
+    $link_sortear             = $flagSorteado==1?"this.href=null":"link('sortear');"; 
+    ?>  
       <div id="case_body_small" class="nheight">  
       	<div class="item_body001 fix-png"></div>
         <div class="item006"><img src="images/duen-001.png" width="167" height="176" class="fix-png" /></div>
+
         <div id="menu_left">   
-        	<a href="crear_grupo.html" class="m1 activ"><img src="images/crear-grupo.png" alt="Crear Grupo" border="0" class="fix-png" /></a>
-            <a href="enviar_invitacion.html" class="m2"><img src="images/enviar-intitacion.png" alt="Enviar invitación" border="0" class="fix-png" /></a>
-            <a href="sortear.html" class="m1"><img src="images/sortear-on.png" alt="Sortear" border="0" class="fix-png" /></a>
-            <a href="fecha_de_entrega.html" class="m2"><img src="images/fecha-de-entrega-on.png" alt="Fecha de entrega de regalos" border="0" class="fix-png" /></a> 
-            <a href="panel_de_participantes.html" class="m2"><img src="images/panel-de-participantes-on.png" alt="Panel de participante" border="0" class="fix-png" /></a> 
-            <a href="buzon_del_jefe.html" class="m2"><img src="images/buzon-del-jefe.png"alt="Buzón del jefe" width="176" height="39" border="0" class="fix-png" /></a>
-             </div>
+            <a href="#" class="m1" onclick="<?php echo $link_ingresa_datos_grupo;?>"><img src="images/crear-grupo.png" alt="Crear grupo" border="0" class="fix-png" /></a>
+            <a href="#" class="m2" onclick="<?php echo $link_invitar_amigos;?>"><img src="images/enviar-intitacion.png" alt="Enviar invitación" border="0" class="fix-png" /></a>
+            <a href="#" class="m1" onclick="<?php echo $link_sortear;?>"><img src="images/sortear-on.png" alt="Sortear" border="0" class="fix-png" /></a>
+            <a href="#" class="m2" onclick="link('fecha_de_entrega');"><img src="images/fecha-de-entrega-on.png" alt="Fecha de entrega de regalos" border="0" class="fix-png" /></a> 
+            <a href="#" class="m2 activ" onclick="link('panel_de_participantes');"><img src="images/panel-de-participantes-on.png" alt="Panel de participantes" border="0" class="fix-png" /></a>
+            <a href="#" class="m2" onclick="link('buzon_del_jefe');"><img src="images/buzon-del-jefe.png"alt="Buzón del jefe" width="176" height="39" border="0" class="fix-png" /></a>       
+        </div>
+
         <div class="stream">
        	  <div class="item001"></div>
           
