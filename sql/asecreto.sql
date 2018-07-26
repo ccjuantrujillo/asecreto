@@ -140,7 +140,7 @@ CREATE TABLE `ams_grupo` (
   `GRUPC_FlagConfirmado` char(1) NOT NULL DEFAULT '0',
   `GRUPC_FlagFechaEntrega` char(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`GRUPP_Codigo`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ams_grupo` */
 
@@ -151,7 +151,8 @@ insert  into `ams_grupo`(`GRUPP_Codigo`,`GRUPC_Nombre`,`GRUPC_Puntuacion`,`GRUPC
 (4,'Toons',NULL,5,'3','Cartoon Producciones ','logoCartoon_iab.jpg','2010-11-19 08:37:16',NULL,NULL,NULL,'0','1','1','0','0'),
 (5,'Robotombo',NULL,2,'3','Cartoon Producciones','feliz.JPG','2010-11-19 10:11:37',NULL,'2010-11-19 15:00:00',NULL,'1','1','1','1','1'),
 (6,'Relaxito',NULL,2,'1','','','2010-11-19 13:07:04',NULL,NULL,NULL,'1','1','1','1','0'),
-(7,'Grupo1',NULL,36,'1','','','2017-12-19 13:35:07',NULL,NULL,NULL,'0','0','1','0','0');
+(7,'Grupo1',NULL,36,'1','','','2017-12-19 13:35:07',NULL,NULL,NULL,'0','0','1','0','0'),
+(8,'Grupo No1',NULL,5,'1','','','2018-07-26 07:45:55',NULL,NULL,NULL,'0','0','1','0','0');
 
 /*Table structure for table `ams_logbanner` */
 
@@ -334,10 +335,7 @@ CREATE TABLE `ams_usuario` (
 /*Data for the table `ams_usuario` */
 
 insert  into `ams_usuario`(`USUAP_Codigo`,`TIPOP_Codigo`,`UBIGP_Codigo`,`USUAC_Correo`,`USUAC_Password`,`USUAC_Apellidos`,`USUAC_Nombres`,`USUAC_Foto`,`USUAC_FechaNacimiento`,`USUAC_FechaRegistro`,`USUAC_FechaModificacion`,`USUAC_NumeroDocumento`,`USUAC_Telefono`,`USUAC_Sexo`,`USUAC_Ciudad`,`USUAC_FlagEnviado`,`USUAC_FlagConfirmado`,`USUAC_FlagPromociones`,`USUAC_FlagNotificaciones`,`USUAC_FlagEstado`,`USUAC_FlagAdministrador`,`USUAC_FlagBienvenida`) values 
-(2,1,'000000','demo@correo.com','123456','Vila','Ricardo','','1963-05-05 00:00:00','2010-11-18 18:56:08',NULL,'10101010','4569874','','JUNIN','1','1','1','1','1','1','1'),
-(3,1,'000000','erica@correo.com','ericatoon','Melgar','Erica ','','1977-11-08 00:00:00','2010-11-18 19:06:22',NULL,'25831790','5657520','','LIMA','1','1','1','1','1','1','0'),
-(4,1,'000000','ricardo@correo.com','1187978569000','','ricardo','','0000-00-00 00:00:00','2010-11-18 19:36:45',NULL,'','','','','1','0','0','0','1','0','0'),
-(5,1,'000000','arturo@correo.com','qwerty','maguiÃ±a','felix','','1950-01-01 00:00:00','2010-11-18 19:36:45',NULL,'458745874','9632587','','PIURA','1','1','1','1','1','1','1');
+(2,1,'000000','demo@correo.com','123456','Vila','Ricardo','','1963-05-05 00:00:00','2010-11-18 18:56:08',NULL,'10101010','4569874','','JUNIN','1','1','1','1','1','1','1');
 
 /*Table structure for table `ams_usuariogrupo` */
 
