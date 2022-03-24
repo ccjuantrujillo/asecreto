@@ -5,7 +5,7 @@ class BD{
 	private $rows;
 	private $cadena;
 	public function __construct(){
-		if(!$this->cnx   = mysqli_connect("localhost","root","123456","asecreto")){
+		if(!$this->cnx   = mysqli_connect("localhost:3308","root","123456","asecreto")){
 			echo "Error en la conecion";
 		}
 	}
